@@ -15,8 +15,9 @@
 		8F0D13BB1DEC792200112D23 /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D13B31DEC792200112D23 /* ItemType+CoreDataProperties.swift */; };
 		8F0D13BC1DEC792200112D23 /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D13B41DEC792200112D23 /* Store+CoreDataClass.swift */; };
 		8F0D13BD1DEC792200112D23 /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D13B51DEC792200112D23 /* Store+CoreDataProperties.swift */; };
+		8F0D13C01DEC7DE300112D23 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0D13BF1DEC7DE300112D23 /* MaterialView.swift */; };
 		8F1DCBCE1DEC6AB200594BE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1DCBCD1DEC6AB200594BE9 /* AppDelegate.swift */; };
-		8F1DCBD01DEC6AB200594BE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1DCBCF1DEC6AB200594BE9 /* ViewController.swift */; };
+		8F1DCBD01DEC6AB200594BE9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1DCBCF1DEC6AB200594BE9 /* MainVC.swift */; };
 		8F1DCBD31DEC6AB200594BE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1DCBD11DEC6AB200594BE9 /* Main.storyboard */; };
 		8F1DCBD61DEC6AB200594BE9 /* WishList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F1DCBD41DEC6AB200594BE9 /* WishList.xcdatamodeld */; };
 		8F1DCBD81DEC6AB200594BE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1DCBD71DEC6AB200594BE9 /* Assets.xcassets */; };
@@ -32,9 +33,10 @@
 		8F0D13B31DEC792200112D23 /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8F0D13B41DEC792200112D23 /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8F0D13B51DEC792200112D23 /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8F0D13BF1DEC7DE300112D23 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		8F1DCBCA1DEC6AB200594BE9 /* WishList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WishList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1DCBCD1DEC6AB200594BE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F1DCBCF1DEC6AB200594BE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F1DCBCF1DEC6AB200594BE9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		8F1DCBD21DEC6AB200594BE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F1DCBD51DEC6AB200594BE9 /* WishList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WishList.xcdatamodel; sourceTree = "<group>"; };
 		8F1DCBD71DEC6AB200594BE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F0D13BE1DEC7DC900112D23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F0D13BF1DEC7DE300112D23 /* MaterialView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		8F1DCBC11DEC6AB200594BE9 = {
 			isa = PBXGroup;
 			children = (
@@ -72,9 +82,10 @@
 		8F1DCBCC1DEC6AB200594BE9 /* WishList */ = {
 			isa = PBXGroup;
 			children = (
+				8F0D13BE1DEC7DC900112D23 /* View */,
 				8F1DCBF21DEC749800594BE9 /* Model */,
 				8F1DCBCD1DEC6AB200594BE9 /* AppDelegate.swift */,
-				8F1DCBCF1DEC6AB200594BE9 /* ViewController.swift */,
+				8F1DCBCF1DEC6AB200594BE9 /* MainVC.swift */,
 				8F1DCBD11DEC6AB200594BE9 /* Main.storyboard */,
 				8F1DCBD71DEC6AB200594BE9 /* Assets.xcassets */,
 				8F1DCBD91DEC6AB200594BE9 /* LaunchScreen.storyboard */,
@@ -183,7 +194,8 @@
 				8F0D13B91DEC792200112D23 /* Item+CoreDataProperties.swift in Sources */,
 				8F0D13B81DEC792200112D23 /* Item+CoreDataClass.swift in Sources */,
 				8F0D13BB1DEC792200112D23 /* ItemType+CoreDataProperties.swift in Sources */,
-				8F1DCBD01DEC6AB200594BE9 /* ViewController.swift in Sources */,
+				8F0D13C01DEC7DE300112D23 /* MaterialView.swift in Sources */,
+				8F1DCBD01DEC6AB200594BE9 /* MainVC.swift in Sources */,
 				8F0D13BD1DEC792200112D23 /* Store+CoreDataProperties.swift in Sources */,
 				8F0D13B71DEC792200112D23 /* Image+CoreDataProperties.swift in Sources */,
 				8F0D13BA1DEC792200112D23 /* ItemType+CoreDataClass.swift in Sources */,
