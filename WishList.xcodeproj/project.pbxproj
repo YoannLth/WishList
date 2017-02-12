@@ -22,6 +22,7 @@
 		8F1DCBD61DEC6AB200594BE9 /* WishList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F1DCBD41DEC6AB200594BE9 /* WishList.xcdatamodeld */; };
 		8F1DCBD81DEC6AB200594BE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1DCBD71DEC6AB200594BE9 /* Assets.xcassets */; };
 		8F1DCBDB1DEC6AB200594BE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1DCBD91DEC6AB200594BE9 /* LaunchScreen.storyboard */; };
+		8FBA7F081DEDACE1005E889E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBA7F071DEDACE1005E889E /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		8F1DCBD71DEC6AB200594BE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F1DCBDA1DEC6AB200594BE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F1DCBDC1DEC6AB200594BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FBA7F071DEDACE1005E889E /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				8F0D13BF1DEC7DE300112D23 /* MaterialView.swift */,
+				8FBA7F071DEDACE1005E889E /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FBA7F081DEDACE1005E889E /* ItemCell.swift in Sources */,
 				8F0D13B91DEC792200112D23 /* Item+CoreDataProperties.swift in Sources */,
 				8F0D13B81DEC792200112D23 /* Item+CoreDataClass.swift in Sources */,
 				8F0D13BB1DEC792200112D23 /* ItemType+CoreDataProperties.swift in Sources */,
