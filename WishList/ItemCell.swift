@@ -17,7 +17,8 @@ class ItemCell: UITableViewCell {
   
   func configureCell(item: Item) {
     titleLabel.text = item.title
-    priceLabel.text = "\(item.price)"
+    priceLabel.text = "\(item.price)€"
     descriptionLabel.text = item.details
+    thumbmailimage.image = item.toImage?.image as? UIImage
   }
 }

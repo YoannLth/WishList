@@ -22,7 +22,7 @@ class MainVC: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     
-    generateTestData()
+    //generateTestData()
     
     attempFetch()
   }
@@ -44,6 +44,11 @@ class MainVC: UIViewController {
     item3.details = "I fucking want this shit!"
     
     _appDelegate.saveContext()
+  }
+  
+  @IBAction func sortChanged(_ sender: Any) {
+    attempFetch()
+    tableView.reloadData()
   }
 }
 
@@ -86,6 +91,14 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 150
   }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if let objs = controller.fetchedObjects, objs.count > 0 {
+      let item = objs[indexPath.row]
+      
+      performSegue(withIdentifier: "ItemDetailsVC", sender: item)
+    }
+  }
 }
 
 
@@ -98,9 +111,22 @@ extension MainVC: NSFetchedResultsControllerDelegate {
   func attempFetch(){
     let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
     let dateSort = NSSortDescriptor(key: "creationDate", ascending: false)
-    fetchRequest.sortDescriptors = [dateSort]
+    let priceSort = NSSortDescriptor(key: "price", ascending: false)
+    let titleSort = NSSortDescriptor(key: "title", ascending: false)
+    
+    if segmentedControl.selectedSegmentIndex == 0 {
+      fetchRequest.sortDescriptors = [dateSort]
+    } else if segmentedControl.selectedSegmentIndex == 1 {
+      fetchRequest.sortDescriptors = [priceSort]
+    } else {
+      fetchRequest.sortDescriptors = [titleSort]
+    }
+    
+    
     
     let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+    
+    controller.delegate = self
     self.controller = controller
     
     do {
@@ -145,6 +171,23 @@ extension MainVC: NSFetchedResultsControllerDelegate {
         configureCell(cell: cell, indexPath: indexPath)
       }
       break
+    }
+  }
+}
+
+
+
+
+
+// Segue
+extension MainVC {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ItemDetailsVC" {
+      if let destination = segue.destination as? ItemDetailsVC {
+        if let item = sender as? Item {
+          destination.itemToEdit = item
+        }
+      }
     }
   }
 }
