@@ -8,6 +8,6 @@ Wishlist iOS app written in Swift and using CoreData.
 * Data sorting in table view
 
 ## Screenshots
-Home page                            |            Add/edit item
-:-----------------------------------:|:--------------------------------------:
+Home page                                   |            Add/edit item
+:------------------------------------------:|:--------------------------------------:
 ![](/Assets/Screenshots/home.PNG?raw=true)  |  ![](/Assets/Screenshots/addedit.PNG?raw=true)
