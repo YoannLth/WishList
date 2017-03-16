@@ -37,18 +37,6 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     imagePicker.delegate = self
     
     getStores()
-//    let store = Store(context: context)
-//    store.name = "Boulanger"
-//    let store1 = Store(context: context)
-//    store1.name = "Apple"
-//    let store2 = Store(context: context)
-//    store2.name = "Decathlon"
-//    let store3 = Store(context: context)
-//    store3.name = "Ferrari"
-//    let store4 = Store(context: context)
-//    store4.name = "Samsung"
-//    
-//    _appDelegate.saveContext()
     
     if itemToEdit != nil {
       loadItemData()
@@ -88,7 +76,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
       self.stores = try context.fetch(fetchRequest)
       self.storePickerView.reloadAllComponents()
     } catch {
-      //
+      print("Error")
     }
   }
   
